@@ -47,7 +47,8 @@ public class Shoot : MonoBehaviour
             }
             else
             {
-                Destroy(hit.collider.gameObject, 5f);
+                Debug.Log("GHOST HIT!!!");
+                Destroy(hit.collider.gameObject);
             }
         }
         else
