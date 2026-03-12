@@ -39,15 +39,22 @@ public class Shoot : MonoBehaviour
         if (hasHit)
         {
             endpoint = hit.point;
-            Quaternion rayImpactRotation = Quaternion.LookRotation(-hit.normal);
-            GameObject rayImpact = Instantiate(rayImpactPrefab, hit.point, rayImpactRotation);
-            Destroy(rayImpact, 1f);
+            if (hit.collider.gameObject.tag != "Ghost")
+            {
+                Quaternion rayImpactRotation = Quaternion.LookRotation(-hit.normal);
+                GameObject rayImpact = Instantiate(rayImpactPrefab, hit.point, rayImpactRotation);
+                Destroy(rayImpact, 1f);
+            }
+            else
+            {
+                Destroy(hit.collider.gameObject, 5f);
+            }
         }
         else
         {
             endpoint = spawnPoint.position + spawnPoint.forward * maxDistance;
         }
-        
+
         LineRenderer line = Instantiate(linePrefab);
         line.positionCount = 2;
         line.SetPosition(0, spawnPoint.position);
