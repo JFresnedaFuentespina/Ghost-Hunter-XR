@@ -38,17 +38,18 @@ public class Shoot : MonoBehaviour
         Vector3 endpoint = Vector3.zero;
         if (hasHit)
         {
+            GhostBehaviour ghost = hit.transform.GetComponent<GhostBehaviour>();
             endpoint = hit.point;
-            if (hit.collider.gameObject.tag != "Ghost")
+            if (ghost)
+            {
+                Debug.Log("GHOST HIT!!!");
+                ghost.Kill();
+            }
+            else
             {
                 Quaternion rayImpactRotation = Quaternion.LookRotation(-hit.normal);
                 GameObject rayImpact = Instantiate(rayImpactPrefab, hit.point, rayImpactRotation);
                 Destroy(rayImpact, 1f);
-            }
-            else
-            {
-                Debug.Log("GHOST HIT!!!");
-                Destroy(hit.collider.gameObject);
             }
         }
         else
@@ -62,6 +63,6 @@ public class Shoot : MonoBehaviour
         line.SetPosition(1, endpoint);
 
 
-        Destroy(line.gameObject, 10f);
+        Destroy(line.gameObject, 1f);
     }
 }
