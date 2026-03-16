@@ -11,18 +11,27 @@ public class GhostBehaviour : MonoBehaviour
     void Start()
     {
         FindPlayer();
-        agent.SetDestination(playerTransform.position);
+
+        agent.enabled = true;
+
+        // Comprobar si el agente está sobre el NavMesh
+        if (NavMesh.SamplePosition(transform.position, out NavMeshHit hit, 1.0f, NavMesh.AllAreas))
+        {
+            transform.position = hit.position;
+            agent.SetDestination(playerTransform.position);
+        }
+
         agent.stoppingDistance = minDistance;
         agent.speed = speed;
     }
     void Update()
     {
-        if (playerTransform != null)
+        if (playerTransform != null && agent != null)
         {
             agent.SetDestination(playerTransform.position);
         }
     }
-    
+
     void FindPlayer()
     {
         GameObject player = GameObject.FindWithTag("Player");

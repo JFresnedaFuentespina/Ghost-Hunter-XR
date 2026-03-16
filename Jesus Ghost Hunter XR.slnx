@@ -43,6 +43,7 @@
   <Project Path="Unity.Burst.CodeGen.csproj" />
   <Project Path="Meta.XR.BuildingBlocks.AIBlocks.csproj" />
   <Project Path="Unity.VisualScripting.Flow.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Unity.PerformanceTesting.csproj" />
   <Project Path="VoiceSDK.Runtime.csproj" />
   <Project Path="VoiceSDK.Telemetry.Runtime.csproj" />
@@ -83,7 +84,6 @@
   <Project Path="Unity.Collections.CodeGen.csproj" />
   <Project Path="Meta.XR.MetaWand.Editor.csproj" />
   <Project Path="VoiceSDK.Dictation.Editor.csproj" />
-  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Unity.XR.Management.csproj" />
   <Project Path="Meta.XR.Editor.Guide.About.csproj" />
   <Project Path="Unity.Mathematics.Editor.csproj" />
