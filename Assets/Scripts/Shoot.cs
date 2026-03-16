@@ -11,7 +11,7 @@ public class Shoot : MonoBehaviour
     private OVRInput.Button button = OVRInput.Button.PrimaryIndexTrigger; // Index trigger button
     public LayerMask layerMask;
     public LineRenderer linePrefab;
-    public GhostCounter ghostCounter;
+    public GhostCounterDeaths ghostCounter;
 
     // Update is called once per frame
     void Update()

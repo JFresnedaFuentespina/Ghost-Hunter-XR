@@ -5,12 +5,12 @@ using Meta.XR.MRUtilityKit;
 using TMPro;
 using UnityEngine;
 
-public class GhostCounter : MonoBehaviour
+public class GhostCounterDeaths : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameObject hud;
     private TextMeshProUGUI counterText;
-    public int counter = 0;
+    public int deathsCounter = 0;
     public MRUKAnchor.SceneLabels spawnLabels;
     public float minEdgeDistance = 0.3f;
     public float normalOffset;
@@ -65,6 +65,6 @@ public class GhostCounter : MonoBehaviour
     {
         if (!canvasGenerated || counterText == null) return;
 
-        counterText.text = "Spawned: " + counter;
+        counterText.text = "Killed: " + deathsCounter;
     }
 }

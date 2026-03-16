@@ -39,15 +39,18 @@ public class GhostSpawner : MonoBehaviour
 
         while (currentTry < spawnTry)
         {
-            bool hasFoundPosition = room.GenerateRandomPositionOnSurface(MRUK.SurfaceType.VERTICAL, minEdgeDistance, new LabelFilter(spawnLabels), out Vector3 pos, out Vector3 norm);
+            bool hasFoundPosition = room.GenerateRandomPositionOnSurface(MRUK.SurfaceType.FACING_UP, minEdgeDistance, new LabelFilter(spawnLabels), out Vector3 pos, out Vector3 norm);
             if (hasFoundPosition)
             {
-                Vector3 randomPositionNormalOffset = pos + norm * normalOffset;
-                randomPositionNormalOffset.y = 0;
+                Vector3 spawnPos = pos + norm * normalOffset;
 
-                Instantiate(ghostPrefab, randomPositionNormalOffset, Quaternion.identity);
-                ghostCounter.counter++;
-                return;
+                // Coloca sobre el NavMesh
+                if (UnityEngine.AI.NavMesh.SamplePosition(spawnPos, out UnityEngine.AI.NavMeshHit hit, 1.0f, UnityEngine.AI.NavMesh.AllAreas))
+                {
+                    Instantiate(ghostPrefab, hit.position, Quaternion.identity);
+                    ghostCounter.counter++;
+                    return;
+                }
             }
             else
             {

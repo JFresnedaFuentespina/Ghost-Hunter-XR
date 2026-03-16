@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 8211200386213431412}
   - component: {fileID: 6186344955779103337}
   m_Layer: 5
-  m_Name: HUD
+  m_Name: HUD Deaths
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
