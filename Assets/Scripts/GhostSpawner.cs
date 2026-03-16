@@ -11,6 +11,7 @@ public class GhostSpawner : MonoBehaviour
     public MRUKAnchor.SceneLabels spawnLabels;
     public float normalOffset;
     public int spawnTry = 10;
+    public GhostCounter ghostCounter;
 
     private float timer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -23,7 +24,7 @@ public class GhostSpawner : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if(timer > spawnTimer)
+        if (timer > spawnTimer)
         {
             SpawnGhost();
             timer = 0f;
@@ -45,6 +46,7 @@ public class GhostSpawner : MonoBehaviour
                 randomPositionNormalOffset.y = 0;
 
                 Instantiate(ghostPrefab, randomPositionNormalOffset, Quaternion.identity);
+                ghostCounter.counter++;
                 return;
             }
             else
