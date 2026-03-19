@@ -51,4 +51,10 @@ public class OrbSpawner : MonoBehaviour
             spawnedOrbs.Add(orb);
         }
     }
+
+    public void DestroyOrb(GameObject orb)
+    {
+        spawnedOrbs.Remove(orb);
+        Destroy(orb);
+    }
 }

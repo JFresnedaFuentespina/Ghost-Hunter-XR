@@ -2761,6 +2761,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2069956923}
   - component: {fileID: 2069956924}
+  - component: {fileID: 2069956925}
   m_Layer: 0
   m_Name: OrbSpawner
   m_TagString: Untagged
@@ -2795,16 +2796,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24ac128f120914f418438086f7f06f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OrbSpawner
-  orbsToSpawn: 5
-  orbsSpawned: 0
+  numberOfOrbsToSpawn: 5
   orbPrefab: {fileID: 3828760194243838062, guid: 997bcd7eac701af4eadb760f2396397c, type: 3}
-  spawnTimer: 1
-  height: 0
-  minEdgeDistance: 0.3
-  spawnLabels: 9
-  normalOffset: 0
-  spawnTry: 10
-  timer: 0
+  height: 0.1
+  spawnedOrbs: []
+  sceneLabels: 9
+  maxNumberOfTry: 100
+--- !u!114 &2069956925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069956922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52c962f8bb9149499a9d6a7d9518625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Orb
 --- !u!1001 &5616764568122434382
 PrefabInstance:
   m_ObjectHideFlags: 0
