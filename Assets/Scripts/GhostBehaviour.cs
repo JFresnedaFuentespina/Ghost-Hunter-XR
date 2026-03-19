@@ -7,8 +7,10 @@ public class GhostBehaviour : MonoBehaviour
     public float minDistance = 1f;
     public float speed = 2f;
     public NavMeshAgent agent;
+    public Animator animator;
     void Start()
     {
+
     }
     void Update()
     {
@@ -19,6 +21,13 @@ public class GhostBehaviour : MonoBehaviour
 
     public void Kill()
     {
-        Destroy(gameObject);
+        agent.isStopped = true;
+        animator.SetTrigger("Death");
+        Destroy(gameObject, 1.5f);
+    }
+
+    void FindClosestOrb()
+    {
+            
     }
 }

@@ -126,7 +126,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 19588385245968726}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 5efebc9ff1bb643cc9fa371b503c0a80, type: 2}
   m_CullingMode: 0
@@ -177,6 +177,7 @@ MonoBehaviour:
   minDistance: 0.2
   speed: 0.5
   agent: {fileID: 1161087022979413428}
+  animator: {fileID: 2069234913439815857}
 --- !u!136 &1821564424854614742
 CapsuleCollider:
   m_ObjectHideFlags: 0
