@@ -407,18 +407,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 257337334}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 200}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 374764525}
   m_Father: {fileID: 1790222066}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: 106.3, y: 0}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &257337336
 MonoBehaviour:
@@ -1536,7 +1536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6859937037945610794, guid: e0d2b6aa3e6c0fa49829ce1e6a12de00, type: 3}
       propertyPath: maxGhosts
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6859937037945610794, guid: e0d2b6aa3e6c0fa49829ce1e6a12de00, type: 3}
       propertyPath: spawnLabels
@@ -3176,9 +3176,8 @@ MonoBehaviour:
   numberOfOrbsToSpawn: 5
   orbPrefab: {fileID: 3828760194243838062, guid: 997bcd7eac701af4eadb760f2396397c, type: 3}
   height: 0.1
-  orbsSpawned: 0
   orbsAlive: []
-  sceneLabels: 1
+  sceneLabels: 9
   maxNumberOfTry: 100
 --- !u!114 &2069956925
 MonoBehaviour:

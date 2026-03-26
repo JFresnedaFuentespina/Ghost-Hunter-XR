@@ -12,6 +12,7 @@ public class GhostSpawner : MonoBehaviour
     public float normalOffset;
     public int spawnTry = 10;
     public GhostCounter ghostCounter;
+    public int maxGhosts = 10;
 
     private float timer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -24,7 +25,7 @@ public class GhostSpawner : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer > spawnTimer)
+        if (timer > spawnTimer && ghostCounter.counter < maxGhosts)
         {
             SpawnGhost();
             timer = 0f;

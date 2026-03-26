@@ -16,6 +16,7 @@ public class GhostCounterDeaths : MonoBehaviour
     public float normalOffset;
     public int spawnTry = 10;
     public bool canvasGenerated = false;
+    public GhostSpawner ghostSpawner;
     void Start()
     {
         MRUK.Instance.RegisterSceneLoadedCallback(() => StartCoroutine(DelayedCanvasBuild()));

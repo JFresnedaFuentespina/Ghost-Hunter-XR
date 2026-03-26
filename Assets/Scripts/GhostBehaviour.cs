@@ -37,7 +37,7 @@ public class GhostBehaviour : MonoBehaviour
         GameObject closest = null;
         float minDistance = Mathf.Infinity;
 
-        orbs = OrbSpawner.instance.spawnedOrbs;
+        orbs = OrbSpawner.instance.orbsAlive;
 
         foreach (GameObject orb in orbs)
         {
@@ -60,7 +60,7 @@ public class GhostBehaviour : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.GetComponent<Orb>())
+        if (collision.gameObject.CompareTag("Orb"))
         {
             Debug.Log("COLISIÓN CON ORBE!");
             OrbSpawner.instance.DestroyOrb(collision.gameObject);

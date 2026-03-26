@@ -8,7 +8,8 @@ public class OrbSpawner : MonoBehaviour
     public GameObject orbPrefab;
     public float height;
 
-    public List<GameObject> spawnedOrbs;
+    public bool orbsSpawned = false;
+    public List<GameObject> orbsAlive;
     public MRUKAnchor.SceneLabels sceneLabels;
 
     public int maxNumberOfTry = 100;
@@ -48,13 +49,16 @@ public class OrbSpawner : MonoBehaviour
             currentTry = 0;
             randomPosition.y = height;
             GameObject orb = Instantiate(orbPrefab, randomPosition, Quaternion.identity);
-            spawnedOrbs.Add(orb);
+            orbsAlive.Add(orb);
         }
+
+        orbsSpawned = true;
     }
 
     public void DestroyOrb(GameObject orb)
     {
-        spawnedOrbs.Remove(orb);
+        orbsAlive.Remove(orb);
         Destroy(orb);
     }
+
 }
