@@ -6,6 +6,7 @@ public class GhostBehaviour : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public float minDistance = 1f;
+    public float killingOrbDistance = 0.5f;
     public float speed = 2f;
     public NavMeshAgent agent;
     public Animator animator;
@@ -55,15 +56,21 @@ public class GhostBehaviour : MonoBehaviour
                 closest = orb;
             }
         }
+
+        if (minDistance <= killingOrbDistance)
+        {
+            Debug.Log("ORBE MUERTO!");
+            OrbSpawner.instance.DestroyOrb(closest);
+        }
         closestOrb = closest;
     }
 
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Orb"))
-        {
-            Debug.Log("COLISIÓN CON ORBE!");
-            OrbSpawner.instance.DestroyOrb(collision.gameObject);
-        }
-    }
+    // void OnCollisionEnter(Collision collision)
+    // {
+    //     if (collision.gameObject.CompareTag("Orb"))
+    //     {
+    //         Debug.Log("COLISIÓN CON ORBE!");
+    //         OrbSpawner.instance.DestroyOrb(collision.gameObject);
+    //     }
+    // }
 }

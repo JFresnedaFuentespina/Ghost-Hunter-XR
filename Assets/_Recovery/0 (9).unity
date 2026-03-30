@@ -1536,7 +1536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6859937037945610794, guid: e0d2b6aa3e6c0fa49829ce1e6a12de00, type: 3}
       propertyPath: maxGhosts
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6859937037945610794, guid: e0d2b6aa3e6c0fa49829ce1e6a12de00, type: 3}
       propertyPath: spawnLabels
@@ -2109,95 +2109,6 @@ Transform:
   - {fileID: 2038208516}
   m_Father: {fileID: 1790222066}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1445693694
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 693436577545853348, guid: 8867e2d13e3aefb4c9a5dc6f8fc46604, type: 3}
-      propertyPath: normalOffset
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 828726923385077285, guid: 8867e2d13e3aefb4c9a5dc6f8fc46604, type: 3}
-      propertyPath: m_Name
-      value: OrbsCounter
-      objectReference: {fileID: 0}
-    - target: {fileID: 2814387014231657448, guid: 8867e2d13e3aefb4c9a5dc6f8fc46604, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2814387014231657448, guid: 8867e2d13e3aefb4c9a5dc6f8fc46604, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2814387014231657448, guid: 8867e2d13e3aefb4c9a5dc6f8fc46604, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2814387014231657448, guid: 8867e2d13e3aefb4c9a5dc6f8fc46604, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2814387014231657448, guid: 8867e2d13e3aefb4c9a5dc6f8fc46604, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2814387014231657448, guid: 8867e2d13e3aefb4c9a5dc6f8fc46604, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2814387014231657448, guid: 8867e2d13e3aefb4c9a5dc6f8fc46604, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2814387014231657448, guid: 8867e2d13e3aefb4c9a5dc6f8fc46604, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2814387014231657448, guid: 8867e2d13e3aefb4c9a5dc6f8fc46604, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2814387014231657448, guid: 8867e2d13e3aefb4c9a5dc6f8fc46604, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 693436577545853348, guid: 8867e2d13e3aefb4c9a5dc6f8fc46604, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 828726923385077285, guid: 8867e2d13e3aefb4c9a5dc6f8fc46604, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1445693696}
-  m_SourcePrefab: {fileID: 100100000, guid: 8867e2d13e3aefb4c9a5dc6f8fc46604, type: 3}
---- !u!1 &1445693695 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 828726923385077285, guid: 8867e2d13e3aefb4c9a5dc6f8fc46604, type: 3}
-  m_PrefabInstance: {fileID: 1445693694}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1445693696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1445693695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f04828695bb6300468395c61fbddae25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OrbsCounter
-  hud: {fileID: 5648058780454142498, guid: 247fed01d3f4e7a409a52aed0d7b5731, type: 3}
-  counter: 0
-  spawnLabels: 4
-  minEdgeDistance: 0.3
-  normalOffset: 0
-  spawnTry: 10
-  canvasGenerated: 0
 --- !u!1 &1588170745
 GameObject:
   m_ObjectHideFlags: 0
@@ -3269,7 +3180,6 @@ MonoBehaviour:
   orbsAlive: []
   sceneLabels: 1
   maxNumberOfTry: 100
-  orbsCounter: {fileID: 1445693696}
 --- !u!114 &2069956925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3277,7 +3187,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069956922}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f52c962f8bb9149499a9d6a7d9518625, type: 3}
   m_Name: 
@@ -3369,7 +3279,6 @@ SceneRoots:
   - {fileID: 1588170747}
   - {fileID: 1861986461}
   - {fileID: 5616764568122434382}
-  - {fileID: 1445693694}
   - {fileID: 605113923}
   - {fileID: 1818496110}
   - {fileID: 2069956923}
